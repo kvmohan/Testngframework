@@ -3,9 +3,12 @@ pipeline {
 	stages {
       stage('Git Checkout') {
          steps {
-            git 'https://github.com/kvmohan/mediclaim.git'
+            git 'https://github.com/kvmohan/Testngframework.git'
 		}
 	}
+	options{
+		timestamp()
+		}
 	stage('Build') {
 		steps {
 			withSonarQubeEnv('sonar') {
